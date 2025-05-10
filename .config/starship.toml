@@ -1,0 +1,88 @@
+# ~/.config/starship.toml
+
+format = """
+[ ](fg:#ff0000 bg:none)\
+$username\
+[](fg:#ff0000 bg:#b5179e)\
+$hostname\
+[](fg:#b5179e bg:#7209b7)\
+$directory\
+[](fg:#7209b7 bg:#560bad)\
+$git_branch\
+$git_status\
+[](fg:#560bad bg:#3a0ca3)\
+$package\
+[](fg:#3a0ca3 bg:#3f37c9)\
+$nodejs\
+$python\
+$rust\
+[](fg:#3f37c9 bg:#4361ee)\
+$time\
+[](fg:#4361ee)
+$character
+"""
+
+add_newline = false
+
+[username]
+style_user = "fg:black bg:#ff0000"
+style_root = "fg:red bg:#ff0000"
+format = "[  $user ]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+style = "fg:white bg:#b5179e"
+format = "[ @$hostname ]($style)"
+
+[directory]
+style = "fg:#f1f1f1 bg:#7209b7"
+format = "[  $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+symbol = ""
+style = "fg:white bg:#560bad"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "fg:#ffb3c1 bg:#560bad"
+format = "[ $all_status$ahead_behind ]($style)"
+
+[package]
+symbol = "󰏗"
+style = "fg:white bg:#3a0ca3"
+format = "[ $symbol $version ]($style)"
+
+[nodejs]
+symbol = ""
+style = "fg:#00ffcc bg:#3f37c9"
+format = "[ $symbol ($version) ]($style)"
+disabled = false
+
+[python]
+symbol = ""
+style = "fg:#ffd166 bg:#3f37c9"
+format = "[ $symbol ($version) ]($style)"
+disabled = false
+
+[rust]
+symbol = ""
+style = "fg:#ffa69e bg:#3f37c9"
+format = "[ $symbol ($version) ]($style)"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:black bg:#4361ee"
+format = "[  $time ]($style)"
+
+[character]
+success_symbol = "[❯](bold #6e44ff)"
+error_symbol = "[✖](bold red)"
+vimcmd_symbol = "[](green)"
+

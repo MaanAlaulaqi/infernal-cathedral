@@ -1,0 +1,50 @@
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Logs and dumps
+*.log
+*.swp
+*.swo
+*.bak
+
+# System-specific
+.cache/
+.history
+recently-used.xbel
+*.lock
+
+# Neovim/Editor
+*.tmp
+*.backup
+*.undo
+*.session
+session.*
+plugged/
+autoload/
+venv/
+env/
+
+# Alacritty compiled shaders (if using)
+~/.cache/alacritty/
+
+# Node/Rust/Python artifacts (if you experiment)
+node_modules/
+dist/
+target/
+__pycache__/
+*.py[cod]
+
+# SSH keys or other secrets (for sanity)
+*.pem
+*.key
+*.crt
+*.pub
+.env
+secrets.env
+
+# GitHub CLI cache
+~/.config/gh/
+
+# Swap and backup files
+*~
