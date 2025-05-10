@@ -16,6 +16,7 @@ Clone the repo:
 ```bash
 git clone git@github.com:yourusername/infernal-cathedral.git
 cd infernal-cathedral
+```
 
 
 that's it for now, it'll be updated as we go
